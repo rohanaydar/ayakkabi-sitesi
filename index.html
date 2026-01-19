@@ -3,138 +3,640 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayakkabı Dünyası - Online Ayakkabı Mağazası</title>
+    <title>Kral Sneaker - Adım Adım Kalite | Ekonomik Ayakkabılar</title>
+    <meta name="description" content="Kral Sneaker ile en kaliteli ekonomik ayakkabılar! Spor, günlük, bot ve erkek ayakkabı modellerinde en uygun fiyatlar.">
+    <meta name="keywords" content="ekonomik ayakkabı, sneaker, spor ayakkabı, erkek ayakkabı, bot, ucuz ayakkabı">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    
+    <!-- Instagram & WhatsApp -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Üst Navigasyon -->
+    <!-- 🔔 PROMO BANNER -->
+    <div class="promo-banner">
+        <div class="container">
+            <span class="promo-text">🎉 Tüm Ürünlerde %20 İndirim! Kupon Kodu: KRAL20</span>
+            <span class="promo-timer" id="promoTimer">3:00:00</span>
+        </div>
+    </div>
+
+    <!-- 🚀 HEADER -->
     <header class="header">
         <div class="container">
+            <!-- Logo -->
             <div class="logo">
-                <a href="index.html">AYAKKABI DÜNYASI</a>
+                <a href="index.html">
+                    <span class="logo-crown">👑</span>
+                    <span class="logo-text">Kral <span class="logo-highlight">Sneaker</span></span>
+                </a>
+                <p class="logo-slogan">Adım Adım Kalite</p>
             </div>
-            
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html">Ana Sayfa</a></li>
-                    <li><a href="urunler.html">Ürünler</a></li>
-                    <li><a href="hakkimizda.html">Hakkımızda</a></li>
-                    <li><a href="iletisim.html">İletişim</a></li>
-                </ul>
-            </nav>
-            
+
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <form action="urunler.html" method="GET">
+                    <input type="text" placeholder="Sneaker, bot, spor ayakkabı ara..." name="q">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+
+            <!-- User Actions -->
             <div class="user-actions">
-                <a href="hesabim.html" class="user-icon"><i class="fas fa-user"></i></a>
-                <a href="sepet.html" class="cart-icon">
-                    <i class="fas fa-shopping-cart"></i>
+                <a href="hesabim.html" class="user-action" title="Hesabım">
+                    <i class="fas fa-user"></i>
+                    <span>Hesabım</span>
+                </a>
+                <a href="favoriler.html" class="user-action" title="Favoriler">
+                    <i class="fas fa-heart"></i>
+                    <span>Favoriler</span>
+                </a>
+                <a href="sepet.html" class="user-action cart" title="Sepet">
+                    <i class="fas fa-shopping-bag"></i>
                     <span class="cart-count">0</span>
+                    <span>Sepet</span>
                 </a>
             </div>
-            
+
+            <!-- Mobile Menu Button -->
             <button class="mobile-menu-btn">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
     </header>
 
-    <!-- Hero Bölümü -->
+    <!-- 📱 MOBILE MENU (Hidden by default) -->
+    <div class="mobile-menu-overlay"></div>
+    <nav class="mobile-menu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <span class="logo-crown">👑</span>
+                <span class="logo-text">Kral <span class="logo-highlight">Sneaker</span></span>
+            </div>
+            <button class="mobile-menu-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="mobile-search">
+            <input type="text" placeholder="Ürün ara...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <ul class="mobile-nav">
+            <li><a href="index.html" class="active"><i class="fas fa-home"></i> Ana Sayfa</a></li>
+            <li><a href="urunler.html"><i class="fas fa-shoe-prints"></i> Tüm Ürünler</a></li>
+            <li><a href="urunler.html?kategori=spor"><i class="fas fa-running"></i> Spor Ayakkabı</a></li>
+            <li><a href="urunler.html?kategori=erkek"><i class="fas fa-male"></i> Erkek Ayakkabı</a></li>
+            <li><a href="urunler.html?kategori=bot"><i class="fas fa-boot"></i> Bot</a></li>
+            <li><a href="urunler.html?kategori=kadin"><i class="fas fa-female"></i> Kadın Ayakkabı</a></li>
+            <li><a href="urunler.html?kategori=cocuk"><i class="fas fa-child"></i> Çocuk Ayakkabı</a></li>
+            <li><a href="kampanyalar.html"><i class="fas fa-tag"></i> Kampanyalar</a></li>
+            <li><a href="hakkimizda.html"><i class="fas fa-info-circle"></i> Hakkımızda</a></li>
+            <li><a href="iletisim.html"><i class="fas fa-phone"></i> İletişim</a></li>
+        </ul>
+        <div class="mobile-social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+    </nav>
+
+    <!-- 🎯 MAIN NAVIGATION -->
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-list">
+                <li><a href="index.html" class="active"><i class="fas fa-home"></i> Ana Sayfa</a></li>
+                <li class="nav-dropdown">
+                    <a href="urunler.html"><i class="fas fa-shoe-prints"></i> Kategoriler <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-column">
+                            <h4>Spor Ayakkabı</h4>
+                            <a href="urunler.html?kategori=nike">Nike</a>
+                            <a href="urunler.html?kategori=adidas">Adidas</a>
+                            <a href="urunler.html?kategori=puma">Puma</a>
+                            <a href="urunler.html?kategori=newbalance">New Balance</a>
+                        </div>
+                        <div class="dropdown-column">
+                            <h4>Erkek Ayakkabı</h4>
+                            <a href="urunler.html?kategori=erkek-spor">Erkek Spor</a>
+                            <a href="urunler.html?kategori=erkek-gunluk">Günlük Ayakkabı</a>
+                            <a href="urunler.html?kategori=erkek-terlik">Terlik</a>
+                            <a href="urunler.html?kategori=erkek-resmi">Resmi Ayakkabı</a>
+                        </div>
+                        <div class="dropdown-column">
+                            <h4>Bot & Outdoor</h4>
+                            <a href="urunler.html?kategori=kis-botu">Kış Botu</a>
+                            <a href="urunler.html?kategori=ornek-bot">Örnek Bot</a>
+                            <a href="urunler.html?kategori=asker-botu">Asker Botu</a>
+                            <a href="urunler.html?kategori=safari-bot">Safari Bot</a>
+                        </div>
+                        <div class="dropdown-column">
+                            <h4>Kadın & Çocuk</h4>
+                            <a href="urunler.html?kategori=kadin-spor">Kadın Spor</a>
+                            <a href="urunler.html?kategori=topuklu">Topuklu</a>
+                            <a href="urunler.html?kategori=cocuk-spor">Çocuk Spor</a>
+                            <a href="urunler.html?kategori=bebek-ayakkabi">Bebek Ayakkabı</a>
+                        </div>
+                        <div class="dropdown-banner">
+                            <img src="images/banner/dropdown-banner.jpg" alt="Özel İndirim">
+                            <div class="banner-content">
+                                <h4>Fırsatları Kaçırma!</h4>
+                                <p>Sepette %30 İndirim</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="kampanyalar.html"><i class="fas fa-tag"></i> Kampanyalar</a></li>
+                <li><a href="yeni-urunler.html"><i class="fas fa-star"></i> Yeni Ürünler</a></li>
+                <li><a href="en-ucuzlar.html"><i class="fas fa-coins"></i> En Ucuzlar</a></li>
+                <li><a href="hakkimizda.html"><i class="fas fa-info-circle"></i> Hakkımızda</a></li>
+                <li><a href="iletisim.html"><i class="fas fa-phone"></i> İletişim</a></li>
+            </ul>
+            
+            <div class="nav-features">
+                <div class="feature">
+                    <i class="fas fa-shipping-fast"></i>
+                    <span>Ücretsiz Kargo</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-undo"></i>
+                    <span>30 Gün İade</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Güvenli Alışveriş</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 🎨 HERO SECTION -->
     <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <h1>En Şık Ayakkabılar Burada</h1>
-                <p>Kaliteli, konforlu ve şık ayakkabılar için doğru adres</p>
-                <a href="urunler.html" class="btn">Alışverişe Başla</a>
+            <div class="hero-slider">
+                <!-- Slide 1 -->
+                <div class="hero-slide active">
+                    <div class="slide-content">
+                        <h1 class="slide-title">Spor Ayakkabılarda <span class="highlight">Fırsat</span> Fırtınası!</h1>
+                        <p class="slide-text">Nike, Adidas, Puma ve daha fazlası en uygun fiyatlarla!</p>
+                        <div class="slide-price">
+                            <span class="old-price">599 TL</span>
+                            <span class="new-price">299 TL</span>
+                        </div>
+                        <a href="urunler.html?kategori=spor" class="btn btn-primary">
+                            Hemen Al <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="slide-image">
+                        <img src="images/hero/sneaker-hero-1.png" alt="Spor Ayakkabı Fırsatları">
+                    </div>
+                </div>
+                
+                <!-- Slide 2 -->
+                <div class="hero-slide">
+                    <div class="slide-content">
+                        <h1 class="slide-title">Erkek Botlarında <span class="highlight">%40</span> İndirim</h1>
+                        <p class="slide-text">Kışa hazırlık için mükemmel fırsat!</p>
+                        <div class="slide-price">
+                            <span class="old-price">899 TL</span>
+                            <span class="new-price">499 TL</span>
+                        </div>
+                        <a href="urunler.html?kategori=bot" class="btn btn-primary">
+                            İncele <i class="fas fa-boot"></i>
+                        </a>
+                    </div>
+                    <div class="slide-image">
+                        <img src="images/hero/boot-hero-2.png" alt="Bot Fırsatları">
+                    </div>
+                </div>
+                
+                <!-- Slide 3 -->
+                <div class="hero-slide">
+                    <div class="slide-content">
+                        <h1 class="slide-title">Çocuk Ayakkabıları <span class="highlight">199 TL'den</span> Başlayan Fiyatlarla</h1>
+                        <p class="slide-text">Sağlıklı ve konforlu çocuk ayakkabıları!</p>
+                        <div class="slide-price">
+                            <span class="old-price">349 TL</span>
+                            <span class="new-price">199 TL</span>
+                        </div>
+                        <a href="urunler.html?kategori=cocuk" class="btn btn-primary">
+                            Keşfet <i class="fas fa-child"></i>
+                        </a>
+                    </div>
+                    <div class="slide-image">
+                        <img src="images/hero/kids-hero-3.png" alt="Çocuk Ayakkabıları">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slider Controls -->
+            <div class="slider-controls">
+                <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="slider-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
             </div>
         </div>
     </section>
 
-    <!-- Kategoriler -->
+    <!-- 🔥 FLASH SALES -->
+    <section class="flash-sales">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">⚡ Fırsat Köşesi</h2>
+                <div class="timer">
+                    <span class="timer-label">Bitmesine:</span>
+                    <div class="timer-display">
+                        <div class="timer-unit">
+                            <span class="number">12</span>
+                            <span class="label">Saat</span>
+                        </div>
+                        <div class="timer-separator">:</div>
+                        <div class="timer-unit">
+                            <span class="number">45</span>
+                            <span class="label">Dakika</span>
+                        </div>
+                        <div class="timer-separator">:</div>
+                        <div class="timer-unit">
+                            <span class="number">30</span>
+                            <span class="label">Saniye</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flash-products">
+                <!-- Flash product items will be loaded via JavaScript -->
+            </div>
+            
+            <div class="text-center">
+                <a href="kampanyalar.html" class="btn btn-secondary">
+                    Tüm Fırsatları Gör <i class="fas fa-bolt"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 📦 CATEGORIES -->
     <section class="categories">
         <div class="container">
             <h2 class="section-title">Kategoriler</h2>
+            <p class="section-subtitle">İhtiyacınıza uygun kategoriyi keşfedin</p>
+            
             <div class="category-grid">
-                <div class="category-item">
-                    <a href="urunler.html?kategori=erkek">
-                        <img src="images/categories/erkek.jpg" alt="Erkek Ayakkabıları">
-                        <h3>Erkek</h3>
-                    </a>
-                </div>
-                <div class="category-item">
-                    <a href="urunler.html?kategori=kadin">
-                        <img src="images/categories/kadin.jpg" alt="Kadın Ayakkabıları">
-                        <h3>Kadın</h3>
-                    </a>
-                </div>
-                <div class="category-item">
-                    <a href="urunler.html?kategori=cocuk">
-                        <img src="images/categories/cocuk.jpg" alt="Çocuk Ayakkabıları">
-                        <h3>Çocuk</h3>
-                    </a>
-                </div>
-                <div class="category-item">
-                    <a href="urunler.html?kategori=spor">
-                        <img src="images/categories/spor.jpg" alt="Spor Ayakkabıları">
-                        <h3>Spor</h3>
-                    </a>
-                </div>
+                <a href="urunler.html?kategori=spor" class="category-card">
+                    <div class="category-icon" style="background-color: #4A90E2;">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <h3>Spor Ayakkabı</h3>
+                    <p>50+ ürün</p>
+                    <span class="category-badge">%30 İndirim</span>
+                </a>
+                
+                <a href="urunler.html?kategori=erkek" class="category-card">
+                    <div class="category-icon" style="background-color: #2ECC71;">
+                        <i class="fas fa-male"></i>
+                    </div>
+                    <h3>Erkek Ayakkabı</h3>
+                    <p>45+ ürün</p>
+                    <span class="category-badge">Popüler</span>
+                </a>
+                
+                <a href="urunler.html?kategori=bot" class="category-card">
+                    <div class="category-icon" style="background-color: #E74C3C;">
+                        <i class="fas fa-boot"></i>
+                    </div>
+                    <h3>Bot</h3>
+                    <p>30+ ürün</p>
+                    <span class="category-badge">Yeni</span>
+                </a>
+                
+                <a href="urunler.html?kategori=kadin" class="category-card">
+                    <div class="category-icon" style="background-color: #9B59B6;">
+                        <i class="fas fa-female"></i>
+                    </div>
+                    <h3>Kadın Ayakkabı</h3>
+                    <p>40+ ürün</p>
+                    <span class="category-badge">%25 İndirim</span>
+                </a>
+                
+                <a href="urunler.html?kategori=cocuk" class="category-card">
+                    <div class="category-icon" style="background-color: #F1C40F;">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <h3>Çocuk Ayakkabı</h3>
+                    <p>35+ ürün</p>
+                    <span class="category-badge">Ekonomik</span>
+                </a>
+                
+                <a href="urunler.html?kategori=terlik" class="category-card">
+                    <div class="category-icon" style="background-color: #1ABC9C;">
+                        <i class="fas fa-socks"></i>
+                    </div>
+                    <h3>Terlik & Sandalet</h3>
+                    <p>25+ ürün</p>
+                    <span class="category-badge">Yazlık</span>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Popüler Ürünler -->
+    <!-- 🎯 FEATURED PRODUCTS -->
     <section class="featured-products">
         <div class="container">
-            <h2 class="section-title">Popüler Ürünler</h2>
-            <div class="product-grid">
-                <!-- Ürünler JavaScript ile dinamik olarak eklenecek -->
+            <div class="section-header">
+                <h2 class="section-title">🌟 Öne Çıkan Ürünler</h2>
+                <div class="view-options">
+                    <button class="view-btn active" data-view="grid">
+                        <i class="fas fa-th"></i>
+                    </button>
+                    <button class="view-btn" data-view="list">
+                        <i class="fas fa-list"></i>
+                    </button>
+                </div>
             </div>
-            <div class="text-center">
-                <a href="urunler.html" class="btn">Tüm Ürünleri Gör</a>
+            
+            <div class="products-container">
+                <!-- Product Filter -->
+                <div class="product-filter">
+                    <button class="filter-btn active" data-filter="all">Tümü</button>
+                    <button class="filter-btn" data-filter="spor">Spor</button>
+                    <button class="filter-btn" data-filter="erkek">Erkek</button>
+                    <button class="filter-btn" data-filter="bot">Bot</button>
+                    <button class="filter-btn" data-filter="indirim">İndirimli</button>
+                    <button class="filter-btn" data-filter="yeni">Yeni Ürünler</button>
+                </div>
+                
+                <!-- Products Grid -->
+                <div class="products-grid" id="productsGrid">
+                    <!-- 50 products will be loaded via JavaScript -->
+                </div>
+                
+                <!-- Load More -->
+                <div class="load-more">
+                    <button id="loadMoreBtn" class="btn btn-outline">
+                        <i class="fas fa-plus"></i> Daha Fazla Ürün Göster (50/50)
+                    </button>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <!-- 📱 MOBILE APP BANNER -->
+    <section class="app-banner">
         <div class="container">
-            <div class="footer-columns">
-                <div class="footer-col">
-                    <h3>Ayakkabı Dünyası</h3>
-                    <p>En kaliteli ayakkabıları en uygun fiyatlarla sunuyoruz.</p>
-                </div>
-                <div class="footer-col">
-                    <h3>Hızlı Linkler</h3>
-                    <ul>
-                        <li><a href="index.html">Ana Sayfa</a></li>
-                        <li><a href="urunler.html">Ürünler</a></li>
-                        <li><a href="hakkimizda.html">Hakkımızda</a></li>
-                        <li><a href="iletisim.html">İletişim</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>İletişim</h3>
-                    <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> İstanbul, Türkiye</li>
-                        <li><i class="fas fa-phone"></i> 0 (212) 123 45 67</li>
-                        <li><i class="fas fa-envelope"></i> info@ayakkabidunyasi.com</li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Bültenimize Abone Olun</h3>
-                    <p>Kampanyalar ve yeni ürünlerden haberdar olun.</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="E-posta adresiniz" required>
-                        <button type="submit">Gönder</button>
-                    </form>
+            <div class="app-content">
+                <h2>Kral Sneaker Mobil Uygulaması</h2>
+                <p>Uygulamayı indir, özel indirimlerden faydalan!</p>
+                <div class="app-buttons">
+                    <a href="#" class="app-btn">
+                        <i class="fab fa-google-play"></i>
+                        <div>
+                            <span>GET IT ON</span>
+                            <strong>Google Play</strong>
+                        </div>
+                    </a>
+                    <a href="#" class="app-btn">
+                        <i class="fab fa-app-store"></i>
+                        <div>
+                            <span>Download on the</span>
+                            <strong>App Store</strong>
+                        </div>
+                    </a>
                 </div>
             </div>
+            <div class="app-image">
+                <img src="images/app-mockup.png" alt="Mobil Uygulama">
+            </div>
+        </div>
+    </section>
+
+    <!-- 📢 TESTIMONIALS -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">👥 Müşterilerimiz Ne Diyor?</h2>
+            
+            <div class="testimonial-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Çok hızlı kargo ve kaliteli ürünler. Fiyatlar da gerçekten ekonomik!"</p>
+                    <div class="testimonial-author">
+                        <img src="images/avatars/avatar1.jpg" alt="Ahmet Y.">
+                        <div>
+                            <h4>Ahmet Y.</h4>
+                            <span>İstanbul</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="testimonial-text">"Çocuğum için aldığım ayakkabı çok konforlu. Kesinlikle tavsiye ederim."</p>
+                    <div class="testimonial-author">
+                        <img src="images/avatars/avatar2.jpg" alt="Zeynep K.">
+                        <div>
+                            <h4>Zeynep K.</h4>
+                            <span>Ankara</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Kapıda ödeme seçeneği harika! Güvenle alışveriş yapıyorum."</p>
+                    <div class="testimonial-author">
+                        <img src="images/avatars/avatar3.jpg" alt="Mehmet D.">
+                        <div>
+                            <h4>Mehmet D.</h4>
+                            <span>İzmir</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 📍 FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Company Info -->
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <span class="logo-crown">👑</span>
+                        <span class="logo-text">Kral <span class="logo-highlight">Sneaker</span></span>
+                    </div>
+                    <p class="footer-slogan">Adım Adım Kalite</p>
+                    <p class="footer-desc">Ekonomik, kaliteli ve şık ayakkabılar için doğru adres.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-col">
+                    <h3>Hızlı Erişim</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Ana Sayfa</a></li>
+                        <li><a href="urunler.html">Tüm Ürünler</a></li>
+                        <li><a href="kampanyalar.html">Kampanyalar</a></li>
+                        <li><a href="yeni-urunler.html">Yeni Ürünler</a></li>
+                        <li><a href="en-ucuzlar.html">En Ucuzlar</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Categories -->
+                <div class="footer-col">
+                    <h3>Kategoriler</h3>
+                    <ul class="footer-links">
+                        <li><a href="urunler.html?kategori=spor">Spor Ayakkabı</a></li>
+                        <li><a href="urunler.html?kategori=erkek">Erkek Ayakkabı</a></li>
+                        <li><a href="urunler.html?kategori=bot">Bot</a></li>
+                        <li><a href="urunler.html?kategori=kadin">Kadın Ayakkabı</a></li>
+                        <li><a href="urunler.html?kategori=cocuk">Çocuk Ayakkabı</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Support -->
+                <div class="footer-col">
+                    <h3>Destek</h3>
+                    <ul class="footer-links">
+                        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                        <li><a href="iletisim.html">İletişim</a></li>
+                        <li><a href="sss.html">Sıkça Sorulan Sorular</a></li>
+                        <li><a href="iade.html">İade & Değişim</a></li>
+                        <li><a href="kargo.html">Kargo & Teslimat</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact & Newsletter -->
+                <div class="footer-col">
+                    <h3>İletişim</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>İstanbul, Türkiye</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>0850 123 45 67</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@kralsneaker.com</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Pzt-Cmt: 09:00-18:00</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="newsletter">
+                        <h4>Bültene Abone Ol</h4>
+                        <p>Kampanyalardan ilk sen haberdar ol!</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="E-posta adresiniz" required>
+                            <button type="submit">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Payment Methods -->
+            <div class="payment-methods">
+                <h4>Güvenli Ödeme Yöntemleri:</h4>
+                <div class="payment-icons">
+                    <i class="fab fa-cc-visa" title="Visa"></i>
+                    <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+                    <i class="fab fa-cc-amex" title="American Express"></i>
+                    <i class="fas fa-money-bill-wave" title="Kapıda Ödeme"></i>
+                    <i class="fas fa-university" title="Havale/EFT"></i>
+                    <i class="fab fa-cc-paypal" title="PayPal"></i>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
             <div class="footer-bottom">
-                <p>&copy; 2023 Ayakkabı Dünyası. Tüm hakları saklıdır.</p>
+                <p>&copy; 2024 Kral Sneaker. Tüm hakları saklıdır.</p>
+                <div class="footer-links-bottom">
+                    <a href="gizlilik.html">Gizlilik Politikası</a>
+                    <a href="kullanım.html">Kullanım Koşulları</a>
+                    <a href="cerez.html">Çerez Politikası</a>
+                </div>
             </div>
         </div>
     </footer>
 
+    <!-- 📞 WHATSAPP BUTTON -->
+    <a href="https://wa.me/905551234567?text=Kral%20Sneaker%20hakkında%20bilgi%20almak%20istiyorum" 
+       class="whatsapp-btn" target="_blank" title="WhatsApp'tan Yazın">
+        <i class="fab fa-whatsapp"></i>
+        <span>WhatsApp Destek</span>
+    </a>
+
+    <!-- 📸 INSTAGRAM BUTTON -->
+    <a href="https://instagram.com/kralsneaker" 
+       class="instagram-btn" target="_blank" title="Instagram'da Takip Edin">
+        <i class="fab fa-instagram"></i>
+        <span>Instagram</span>
+    </a>
+
+    <!-- ⬆️ BACK TO TOP -->
+    <button class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
     <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
 </body>
 </html>
