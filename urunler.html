@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tüm Ürünler - Ayakkabı Dünyası</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header (index.html ile aynı) -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">AYAKKABI DÜNYASI</a>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="urunler.html" class="active">Ürünler</a></li>
+                    <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                    <li><a href="iletisim.html">İletişim</a></li>
+                </ul>
+            </nav>
+            
+            <div class="user-actions">
+                <a href="hesabim.html" class="user-icon"><i class="fas fa-user"></i></a>
+                <a href="sepet.html" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Ürünler Bölümü -->
+    <section class="products-page">
+        <div class="container">
+            <div class="page-header">
+                <h1>Tüm Ürünler</h1>
+                <p>En kaliteli ayakkabılar burada</p>
+            </div>
+            
+            <div class="products-layout">
+                <!-- Filtreler -->
+                <aside class="filters">
+                    <div class="filter-section">
+                        <h3>Kategoriler</h3>
+                        <ul class="category-filter">
+                            <li><a href="#" data-category="all" class="active">Tümü</a></li>
+                            <li><a href="#" data-category="erkek">Erkek</a></li>
+                            <li><a href="#" data-category="kadin">Kadın</a></li>
+                            <li><a href="#" data-category="cocuk">Çocuk</a></li>
+                            <li><a href="#" data-category="spor">Spor</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="filter-section">
+                        <h3>Fiyat Aralığı</h3>
+                        <div class="price-filter">
+                            <input type="range" min="0" max="1000" value="1000" class="price-slider" id="priceRange">
+                            <div class="price-values">
+                                <span>0 TL</span>
+                                <span id="maxPriceValue">1000 TL</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-section">
+                        <h3>Beden</h3>
+                        <div class="size-filter">
+                            <button class="size-btn" data-size="36">36</button>
+                            <button class="size-btn" data-size="37">37</button>
+                            <button class="size-btn" data-size="38">38</button>
+                            <button class="size-btn" data-size="39">39</button>
+                            <button class="size-btn" data-size="40">40</button>
+                            <button class="size-btn" data-size="41">41</button>
+                            <button class="size-btn" data-size="42">42</button>
+                            <button class="size-btn" data-size="43">43</button>
+                            <button class="size-btn" data-size="44">44</button>
+                        </div>
+                    </div>
+                    
+                    <button class="clear-filters">Filtreleri Temizle</button>
+                </aside>
+                
+                <!-- Ürünler Grid -->
+                <main class="products-container">
+                    <div class="products-header">
+                        <div class="sort-options">
+                            <label for="sort">Sırala:</label>
+                            <select id="sort">
+                                <option value="default">Varsayılan</option>
+                                <option value="price-low">Fiyat (Düşük-Yüksek)</option>
+                                <option value="price-high">Fiyat (Yüksek-Düşük)</option>
+                                <option value="name-a">İsim (A-Z)</option>
+                            </select>
+                        </div>
+                        <p class="product-count"><span id="productCount">12</span> ürün bulundu</p>
+                    </div>
+                    
+                    <div class="products-grid">
+                        <!-- Ürünler JavaScript ile eklenecek -->
+                    </div>
+                    
+                    <!-- Sayfalama -->
+                    <div class="pagination">
+                        <a href="#" class="page-btn disabled"><i class="fas fa-chevron-left"></i></a>
+                        <a href="#" class="page-btn active">1</a>
+                        <a href="#" class="page-btn">2</a>
+                        <a href="#" class="page-btn">3</a>
+                        <a href="#" class="page-btn"><i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (index.html ile aynı) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-col">
+                    <h3>Ayakkabı Dünyası</h3>
+                    <p>En kaliteli ayakkabıları en uygun fiyatlarla sunuyoruz.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Hızlı Linkler</h3>
+                    <ul>
+                        <li><a href="index.html">Ana Sayfa</a></li>
+                        <li><a href="urunler.html">Ürünler</a></li>
+                        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                        <li><a href="iletisim.html">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>İletişim</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> İstanbul, Türkiye</li>
+                        <li><i class="fas fa-phone"></i> 0 (212) 123 45 67</li>
+                        <li><i class="fas fa-envelope"></i> info@ayakkabidunyasi.com</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Bültenimize Abone Olun</h3>
+                    <p>Kampanyalar ve yeni ürünlerden haberdar olun.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="E-posta adresiniz" required>
+                        <button type="submit">Gönder</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Ayakkabı Dünyası. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/urunler.js"></script>
+</body>
+</html>
