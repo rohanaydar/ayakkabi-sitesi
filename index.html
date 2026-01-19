@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayakkabı Dünyası - Online Ayakkabı Mağazası</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Üst Navigasyon -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">AYAKKABI DÜNYASI</a>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="urunler.html">Ürünler</a></li>
+                    <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                    <li><a href="iletisim.html">İletişim</a></li>
+                </ul>
+            </nav>
+            
+            <div class="user-actions">
+                <a href="hesabim.html" class="user-icon"><i class="fas fa-user"></i></a>
+                <a href="sepet.html" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Bölümü -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>En Şık Ayakkabılar Burada</h1>
+                <p>Kaliteli, konforlu ve şık ayakkabılar için doğru adres</p>
+                <a href="urunler.html" class="btn">Alışverişe Başla</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kategoriler -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Kategoriler</h2>
+            <div class="category-grid">
+                <div class="category-item">
+                    <a href="urunler.html?kategori=erkek">
+                        <img src="images/categories/erkek.jpg" alt="Erkek Ayakkabıları">
+                        <h3>Erkek</h3>
+                    </a>
+                </div>
+                <div class="category-item">
+                    <a href="urunler.html?kategori=kadin">
+                        <img src="images/categories/kadin.jpg" alt="Kadın Ayakkabıları">
+                        <h3>Kadın</h3>
+                    </a>
+                </div>
+                <div class="category-item">
+                    <a href="urunler.html?kategori=cocuk">
+                        <img src="images/categories/cocuk.jpg" alt="Çocuk Ayakkabıları">
+                        <h3>Çocuk</h3>
+                    </a>
+                </div>
+                <div class="category-item">
+                    <a href="urunler.html?kategori=spor">
+                        <img src="images/categories/spor.jpg" alt="Spor Ayakkabıları">
+                        <h3>Spor</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popüler Ürünler -->
+    <section class="featured-products">
+        <div class="container">
+            <h2 class="section-title">Popüler Ürünler</h2>
+            <div class="product-grid">
+                <!-- Ürünler JavaScript ile dinamik olarak eklenecek -->
+            </div>
+            <div class="text-center">
+                <a href="urunler.html" class="btn">Tüm Ürünleri Gör</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-col">
+                    <h3>Ayakkabı Dünyası</h3>
+                    <p>En kaliteli ayakkabıları en uygun fiyatlarla sunuyoruz.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Hızlı Linkler</h3>
+                    <ul>
+                        <li><a href="index.html">Ana Sayfa</a></li>
+                        <li><a href="urunler.html">Ürünler</a></li>
+                        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                        <li><a href="iletisim.html">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>İletişim</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> İstanbul, Türkiye</li>
+                        <li><i class="fas fa-phone"></i> 0 (212) 123 45 67</li>
+                        <li><i class="fas fa-envelope"></i> info@ayakkabidunyasi.com</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Bültenimize Abone Olun</h3>
+                    <p>Kampanyalar ve yeni ürünlerden haberdar olun.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="E-posta adresiniz" required>
+                        <button type="submit">Gönder</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Ayakkabı Dünyası. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
