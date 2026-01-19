@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sepetim - Ayakkabı Dünyası</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header (aynı) -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">AYAKKABI DÜNYASI</a>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="urunler.html">Ürünler</a></li>
+                    <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                    <li><a href="iletisim.html">İletişim</a></li>
+                </ul>
+            </nav>
+            
+            <div class="user-actions">
+                <a href="hesabim.html" class="user-icon"><i class="fas fa-user"></i></a>
+                <a href="sepet.html" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Sepet İçeriği -->
+    <section class="cart-page">
+        <div class="container">
+            <div class="page-header">
+                <h1>Sepetim</h1>
+            </div>
+            
+            <div class="cart-layout">
+                <div class="cart-items">
+                    <div class="cart-empty" id="emptyCart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <h2>Sepetiniz Boş</h2>
+                        <p>Sepetinizde henüz ürün bulunmuyor.</p>
+                        <a href="urunler.html" class="btn">Alışverişe Başla</a>
+                    </div>
+                    
+                    <div class="cart-items-container" id="cartItemsContainer" style="display: none;">
+                        <!-- Sepet öğeleri buraya eklenecek -->
+                    </div>
+                </div>
+                
+                <div class="cart-summary">
+                    <h3>Sipariş Özeti</h3>
+                    <div class="summary-details">
+                        <div class="summary-row">
+                            <span>Ara Toplam</span>
+                            <span id="subtotal">0.00 TL</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Kargo</span>
+                            <span id="shipping">0.00 TL</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Toplam</span>
+                            <span id="total">0.00 TL</span>
+                        </div>
+                    </div>
+                    
+                    <div class="coupon-section">
+                        <input type="text" id="couponCode" placeholder="Kupon Kodu">
+                        <button id="applyCoupon" class="btn">Uygula</button>
+                    </div>
+                    
+                    <a href="odeme.html" class="btn checkout-btn" id="checkoutBtn">
+                        <i class="fas fa-lock"></i> Güvenli Ödemeye Geç
+                    </a>
+                    
+                    <div class="payment-methods">
+                        <img src="images/payments/visa.png" alt="Visa">
+                        <img src="images/payments/mastercard.png" alt="Mastercard">
+                        <img src="images/payments/amex.png" alt="American Express">
+                        <img src="images/payments/paypal.png" alt="PayPal">
+                    </div>
+                    
+                    <div class="cart-security">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>256-bit SSL ile güvenli alışveriş</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Önerilen Ürünler -->
+            <div class="recommended-products">
+                <h3>Sizin İçin Önerilenler</h3>
+                <div class="product-grid">
+                    <!-- Önerilen ürünler buraya eklenecek -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (aynı) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-col">
+                    <h3>Ayakkabı Dünyası</h3>
+                    <p>En kaliteli ayakkabıları en uygun fiyatlarla sunuyoruz.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Hızlı Linkler</h3>
+                    <ul>
+                        <li><a href="index.html">Ana Sayfa</a></li>
+                        <li><a href="urunler.html">Ürünler</a></li>
+                        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                        <li><a href="iletisim.html">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>İletişim</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> İstanbul, Türkiye</li>
+                        <li><i class="fas fa-phone"></i> 0 (212) 123 45 67</li>
+                        <li><i class="fas fa-envelope"></i> info@ayakkabidunyasi.com</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Bültenimize Abone Olun</h3>
+                    <p>Kampanyalar ve yeni ürünlerden haberdar olun.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="E-posta adresiniz" required>
+                        <button type="submit">Gönder</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Ayakkabı Dünyası. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/sepet.js"></script>
+</body>
+</html>
