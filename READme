@@ -1,0 +1,36 @@
+# Ayakkabı E-ticaret Sitesi
+
+Bu proje, online ayakkabı satışı yapmak için geliştirilmiş bir e-ticaret web sitesidir.
+
+## Özellikler
+
+- Responsive tasarım (mobil uyumlu)
+- Ürün kategorileri
+- Sepet işlevselliği
+- Kullanıcı hesap yönetimi
+- Güvenli ödeme entegrasyonu için altyapı
+
+## Kurulum
+
+1. Bu depoyu klonlayın
+2. `index.html` dosyasını bir tarayıcıda açın
+3. Geliştirme için bir local server kullanmanız önerilir
+
+## Kullanılan Teknolojiler
+
+- HTML5
+- CSS3 (Flexbox, Grid)
+- JavaScript (ES6+)
+- LocalStorage (sepet verileri için)
+
+## Yapılacaklar
+
+- [ ] Backend entegrasyonu (PHP veya Node.js)
+- [ ] Ödeme sistemi entegrasyonu
+- [ ] Kullanıcı giriş/üyelik sistemi
+- [ ] Admin paneli
+- [ ] Ürün yönetim sistemi
+
+## Lisans
+
+MIT
