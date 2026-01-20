@@ -262,4 +262,47 @@ function updatePaginationUI(pagination) {
                 displayProductsPage(pagination);
                 updatePaginationUI(pagination);
             });
-           
+            pageNumbers.appendChild(firstPage);
+            
+            if (startPage > 2) {
+                const dots = document.createElement('span');
+                dots.className = 'page-dots';
+                dots.textContent = '...';
+                pageNumbers.appendChild(dots);
+            }
+        }
+        
+        // Sayfa numaraları
+        for (let i = startPage; i <= endPage; i++) {
+            const pageBtn = document.createElement('button');
+            pageBtn.className = `page-btn ${i === info.current ? 'active' : ''}`;
+            pageBtn.textContent = i;
+            pageBtn.addEventListener('click', () => {
+                pagination.goToPage(i);
+                displayProductsPage(pagination);
+                updatePaginationUI(pagination);
+            });
+            pageNumbers.appendChild(pageBtn);
+        }
+        
+        // Son sayfa
+        if (endPage < info.total) {
+            if (endPage < info.total - 1) {
+                const dots = document.createElement('span');
+                dots.className = 'page-dots';
+                dots.textContent = '...';
+                pageNumbers.appendChild(dots);
+            }
+            
+            const lastPage = document.createElement('button');
+            lastPage.className = 'page-btn';
+            lastPage.textContent = info.total;
+            lastPage.addEventListener('click', () => {
+                pagination.goToPage(info.total);
+                displayProductsPage(pagination);
+                updatePaginationUI(pagination);
+            });
+            pageNumbers.appendChild(lastPage);
+        }
+    }
+}
